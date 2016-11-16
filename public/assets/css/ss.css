@@ -1,0 +1,316 @@
+
+.form-control {
+  font-family: 'Josefin Sans', cursive;
+  margin-top: 20px;
+  width: 50%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.btn-danger {
+  font-family: 'Josefin Sans', cursive;
+  font-size: 20px;
+  color: #fff;
+  font-size:12px;
+  background-color: #82b1ff;
+  border-color: #BBDEFB;
+  width: 20%;
+  line-height: 150%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: #64B5F6;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #82b1ff;
+  border-color: #BBDEFB;
+}
+.btn-danger:active:hover,
+.btn-danger.active:hover,
+.open > .dropdown-toggle.btn-danger:hover,
+.btn-danger:active:focus,
+.btn-danger.active:focus,
+.open > .dropdown-toggle.btn-danger:focus,
+.btn-danger:active.focus,
+.btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger.focus {
+  color: #fff;
+  background-color: #82b1ff;
+  border-color: #BBDEFB;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: cornflowerblue;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid cornflowerblue;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  z-index: 2;
+  color: white;
+  background-color: cornflowerblue;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 3;
+  color: white;
+  cursor: default;
+  background-color: cornflowerblue;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: cornflowerblue;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: cornflowerblue;
+}
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.table-info{
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.table-info th{
+  font-family: 'Josefin Sans', cursive;
+  background-color: turquoise;
+  color: white;
+  border-radius: 5px;
+}
+.table-info td{
+  font-family: 'Josefin Sans', cursive;	
+  border-radius: 5px;
+}
+.link-table{
+  text-decoration: none;
+  color: white;
+}
+.link-table:hover{
+  text-decoration: underline
+}
+.link-reg{
+  font-family: 'Josefin Sans', cursive;
+  text-decoration: none;
+  color: white;
+}
+.link-reg:hover{
+  text-decoration: underline;
+}
+.title-text{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 50px;
+  position: relative;
+  top: 30px;
+}
+.link-text{
+	color: white;
+	font-family: 'Josefin Sans', cursive;
+	position:relative;
+	bottom: 8px;
+	text-decoration:none;
+	background-color:cornflowerblue;
+	padding: 10px 10px 10px 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.link-text:hover{
+	text-decoration:underline;
+}
+.form-login{
+  margin-top: 15px;
+  background-color: cornflowerblue;
+  line-height: 5px;
+  width: 30%;
+  border-radius: 10px;
+}
+.form-body{
+  font-family: 'Josefin Sans', cursive;
+  color: white;
+}
+.msg-text{
+	line-height:10px;
+}
+.form-forget{
+	margin-top:10%;
+	background-color: cornflowerblue;
+	width:40%;
+	line-height:30px;
+	text-align:center;
+	border-radius:20px;
+
+}
+.form-forg{
+	position: relative;
+	top:5px;
+	color:white;
+	font-family: 'Josefin Sans', cursive;
+}
+.form-reg{
+	margin-top:10%;
+	font-family: 'Josefin Sans', cursive;
+	background-color: cornflowerblue;
+	text-align:center;
+	width:40%;
+	border-radius:10px;
+	color:white;
+}
+.title-reg{
+	position:relative;
+	top:120px;
+	font-family: 'Kaushan Script', cursive;
+ 	position: relative;
+}
+.error-text{
+	position:relative;
+	top:10px;
+	color: white;
+}
+.list-text{
+	font-family: 'Josefin Sans', cursive;
+	font-size:15px;
+	margin:5px;
+    background-color: cornflowerblue;
+    width:15%;
+    height:4%;
+    color:#fff;
+    border-color:#fff;
+}
+.pic-user{
+	width:50px;
+	height:50px;
+}
+.form-pic{
+	margin-top:10%;
+	padding-top:3%;
+	color:white;
+	background-color:cornflowerblue;
+	width:20%;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.but-pic{
+	padding-left:25%;
+	font-family: 'Josefin Sans', cursive;
+ 	text-align:center;
+}
+.user-form{
+	background-color:cornflowerblue;
+	font-family: 'Josefin Sans', cursive;
+	color:white;
+	margin-top:3%;
+	width:40%;
+	padding:3% 5% 3%;
+	border-radius:50px;
+}
+.img-user{
+	width: 80%;
+	padding:0% 0% 3%;
+}
+.user-text{
+	font-family: 'Kaushan Script', cursive;
+	font-size:27px;
+}
