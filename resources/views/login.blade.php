@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +22,7 @@
 
   <body class="login">
     <div>
-      <a class="hiddenanchor" id="signup"></a>
+      <  class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">

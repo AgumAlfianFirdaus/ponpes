@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
 
     @include('/headermeta')
-    
+
     <!-- bootstrap-wysiwyg -->
     <link href="{{ asset("assets/gentelella/vendors/google-code-prettify/bin/prettify.min.css") }}"  rel="stylesheet">
     <!-- Select2 -->
@@ -22,14 +23,14 @@
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-              
+
             @include('user/sidebar')
 
           </div>
         </div>
 
         @include('user/topmenu')
-        
+
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -41,11 +42,11 @@
             <div class="clearfix"></div>
 
 
-            
+
 
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Change User password<small>Click to validate</small></h2>
+                    <h2>Edit Data Santri <small>Click to validate</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -53,23 +54,67 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
-                    <!-- start form for validation -->
-                    @if(Session::has('message'))
-					 <span class="label label-success">{{ Session::get('message') }}</span>
+                  	@if(Session::has('message'))
+						<span>{{ Session::get('message') }}</span>
 					@endif
-                    <form id="demo-form" method="post" action="{{url('/change-process')}}" >
+					<!-- start form for validation -->
+                    <form id="demo-form" method="post" action="{{url('/santri_process')}}" data-parsley-validate>
                       {{csrf_field()}}
-                      <input type="hidden" name="id" value="">
-                      <label for="fullname">Password:</label>
-                      <input type="password" id="password" class="form-control" name="password" required="" />
+                      <input type="hidden" name="nis" value="{{$santri->nis}}">
 
-                      <label for="email">New Password:</label>
-                      <input type="password" id="newpas" class="form-control" name="newpas"  required="" />
-					  
-					  <label for="email">Retype new Password:</label>
-                      <input type="password" id="repas" class="form-control" name="repas"  required="" />
-					  <p></p>
+                      <label for="nama_lengkap">Nama Lengkap:</label>
+                      <input type="text" id="fullname" class="form-control" name="nama_lengkap" value="{{$santri->nama_lengkap}}" required />
+
+                      <label for="nama_panggilan">Nama Panggilan:</label>
+                      <input type="text" id="email" class="form-control" name="nama_panggilan" value="{{$santri->nama_panggilan}}" data-parsley-trigger="change" required />
+
+                      <label for="tanggal_lahir">Tanggal Lahir:</label>
+                      <input type="date" id="tanggal_lahir" class="form-control" name="tanggal _lahir" value="{{$santri->tanggal_lahir}}" required />
+
+                      <label for="heard">Jenis Kelamin:</label>
+                         <select class="form-control" name="jenis_kelamin">
+                          @foreach($jenis_kelamin as $jk)
+                            @if($jk->jenis_kelamin == $santri->jenis_kelamin)
+                            <option value="{{ $jk->jenis_kelamin }}" selected=""> {{ $jk->jenis_kelamin }} </option>
+                           @else
+                            <option value="{{ $jk->jenis_kelamin }}"> {{ $jk->jenis_kelamin }} </option>
+                          @endif
+                          @endforeach
+                        </select >
+
+
+                      <label for="alamat">Alamat:</label>
+                      <Input type="text" class="form-control" placeholder="Alamat" name="alamat" value="{{$santri->alamat}}"/>
+
+                      <label for="daerah">Daerah:</label>
+                      <input type="text" id="daerah" class="form-control" name="daerah" value="{{$santri->daerah}}" required />
+
+                      <label for="heard">Status:</label>
+                         <select class="form-control" name="status" >
+                          @foreach($status as $s)
+                            @if($s->status == $santri->status)
+                            <option value="{{ $s->status }}" selected=""> {{ $s->status }} </option>
+                           @else
+                            <option value="{{ $s->status }}"> {{ $s->status }} </option>
+                          @endif
+                          @endforeach
+                        </select >
+
+
+                      <label for="ayah">Nama Ayah:</label>
+                      <input type="ayah" id="ayah" class="form-control" name="ayah" value="{{$santri->ayah}}" data-parsley-trigger="change" required="" readonly="readonly"  />
+
+                      <label for="fullname">Nama Ibu:</label>
+                      <input type="text" id="ibu" class="form-control" name="ibu" value="{{$santri->ibu}}" required="" readonly="readonly" />
+
+
+
+                      <label for="no_hp">No Telepon:</label>
+                      <input type="number" id="no_hp" class="form-control" name="no_hp" value="{{$santri->no_hp}}" data-parsley-trigger="change" required />
+
+					           
+
+                          <br/>
                           <input type="submit" class="btn btn-primary" value="Submit">
 
                     </form>
@@ -81,26 +126,15 @@
 
               </div>
 
-              
-                        
-
-
-                    
-
-           
-
-            
-
-
         <!-- /page content -->
 
         @include('footer')
-        
+
       </div>
     </div>
 
     @include('footerjs')
-    
+
     <!-- bootstrap-progressbar -->
     <script src="{{ asset("assets/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js") }}" ></script>
     <!-- iCheck -->

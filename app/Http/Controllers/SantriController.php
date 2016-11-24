@@ -37,7 +37,7 @@ class SantriController extends Controller
             
         } else if (Auth::user()->hak_akses=="user"){
             Session::put('login_status', 'loggedin');
-            return Redirect::to('user');
+            return Redirect::to('user/read_santri');
         }
 
        }
@@ -51,13 +51,18 @@ class SantriController extends Controller
    public function readData()
    {
         $cekAkses = $this->checkAccesAccount();
-        if($cekAkses!="") return $cekAkses;
+        // if($cekAkses!="") return $cekAkses;
         
-        
-        $login=DB::table('login') ->get();
+                
+        $login=DB::table('login')->get();
         return View::make('admin/admin_read', compact('login'));
         
        
+   }
+   public function userRead()
+   {
+     $santri=DB::table('santri')->get();
+     return View::make('user/read_santri',compact('santri'));
    }
 
    public function cekLogin()
@@ -103,7 +108,14 @@ class SantriController extends Controller
 
    public function dataGuru()
    {
-      return View::make('santri/data_guru');
+      if (Auth::user()->hak_akses=="admin"){
+            Session::put('login_status', 'loggedin');
+            return View::make('santri/data_guru');
+            
+        } else if (Auth::user()->hak_akses=="user"){
+            Session::put('login_status', 'loggedin');
+            return View::make('user/data_guru');
+        }
    }
    
    public function addData(){
@@ -215,8 +227,15 @@ class SantriController extends Controller
     // return $aa;
     $bayar=pembayaran::with('santri')->get();
     // return $bayar;
-    return view::make('santri/data_pembayaran', compact('data','bayar')) ;
-   
+    // return view::make('santri/data_pembayaran', compact('data','bayar')) ;
+   if (Auth::user()->hak_akses=="admin"){
+            Session::put('login_status', 'loggedin');
+            return  Redirect::to('santri/data_pembayaran', compact('data','bayar'));
+            
+        } else if (Auth::user()->hak_akses=="user"){
+            Session::put('login_status', 'loggedin');
+            return View::make('user/data_pembayaran', compact('data','bayar'));
+        }
    }
 
     public function bayarProses()

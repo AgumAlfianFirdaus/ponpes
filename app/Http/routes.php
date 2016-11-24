@@ -20,20 +20,27 @@ Route::get('read','AdminController@readData');
 
 Route::post('login', 'AdminController@login');
 Route::get('read','SantriController@readData');
+Route::get('user','SantriController@userRead');
 Route::get('/','SantriController@index');
 Route::get('read_santri','SantriController@readSantri');
 Route::post('daftar_santri','SantriController@daftarSantri');
 Route::get('hapus/{nis}','SantriController@delete');
+
 Route::get('santri_edit/{nis}','SantriController@editdata');
 Route::post('santri_process', 'SantriController@proccesEdit');
+
 Route::get('edit-user/{id}', 'SantriController@editUser');
 Route::post('user-process', 'SantriController@userProcess');
 Route::get('data_guru', 'SantriController@dataGuru');
+
 Route::get('print', 'SantriController@printsantri');
 Route::get('printbayar', 'SantriController@printBayar');
 Route::get('pembayaran', 'SantriController@pembayaran');
 Route::post('bayar', 'SantriController@bayarProses');  
 Route::get('del/{no_pembayaran}', 'SantriController@delPembayaran');
+
+Route::get('admin-change/{id}', 'AdminController@adminChange');
+Route::post('admin-procces-pas','AdminController@adminProcessPass');
 Route::get('logout', 'SantriController@logout');
 
 // Route::post('santri_daf', ' SantriController@santriDaf');

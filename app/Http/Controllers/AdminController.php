@@ -125,7 +125,7 @@ class AdminController extends Controller
        	return View::make('admin/admin_changepas')-> with('login',$data);
 	}
 	
-	public function adminProcessPas()
+	public function adminProcessPass()
 	{
 		if (empty(Input::get('newpas'))){
 			return Redirect::to('admin-change/'. input::get('id'))->with('message','Password is empty');

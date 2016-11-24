@@ -24,12 +24,12 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
               
-            @include('admin/sidebar')
+            @include('sidebar')
 
           </div>
         </div>
 
-        @include('admin/topmenu')
+        @include('topmenu')
         
         <!-- page content -->
         <div class="right_col" role="main">
